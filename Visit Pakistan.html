@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title> Animated Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+ /* yani agr hm koi padding wagera deta hai kisi box mai tou wou border sa bahir nhi jai ga islia border- box property use ki. */
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            /* For making it litle bit darker we use linear gradient. */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("https://images.unsplash.com/photo-1470756544705-1848092fbe5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFraXN0YW58ZW58MHx8MHx8&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0,0,0,0.2);
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        nav .logo{
+            width: 30%;
+            text-align: center;
+
+        }
+        nav .menu a{
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+        }
+        nav .menu a:first-child{
+                 color: tomato;
+        }
+        nav .menu a:hover{
+            text-decoration: underline;
+            font-size: 25px;
+            color: black;
+            background-color: white;
+
+        }
+        main{
+            width: 100%;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        section h3{
+            color: violet;
+            font-weight: 200;
+            font-size: 30px;
+            text-shadow: 1px 2px 3px black;
+            letter-spacing: 3px;
+
+        }
+        section h1{
+            color: white;
+            font-size: 40px;
+            font-weight: 600;
+            text-shadow: 2px 1px 5px black;
+            text-transform: capitalize;
+            margin: 20px 0 10px 0;
+
+        }
+        section p{
+            font-family: fantasy;
+            font-size: 30px;
+            word-spacing: 4px;
+            text-shadow: 2px 2x 2px black;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .btn{
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+        }
+        .btn:hover{
+            color: black;
+            background-color: white;
+        }
+
+        .text_changer::after{
+            content : "";
+            animation: text-converter 12s infinite linear;
+        }
+        @keyframes text-converter {
+            0%{
+                content : " Karachi";
+                color: #00b894;
+            }
+            25%{
+                content : " Islamabad";
+                color: #1a302b;
+
+            }
+            50%{
+                content : " Lahore";
+                color: #296b39;
+
+            }
+            75%{
+                content : " Peshawar";
+                color: #070f0e;
+
+            }
+            100%{
+                content : " Quetta";
+                color: #453f99;
+
+            }
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1 class="animate__animated animate__heartBeat"> Pakistan Meri Jaan</h1>
+            </div>
+            <div class="menu">
+                <a href="#"> Home</a>
+                <a href="#"> Pictures</a>
+                <a href="https://www.google.com/" target="_blank"> About</a>
+                <a href="#"> Contact</a>
+            </div>
+            </nav>
+            <main>
+                <section>
+                    <h3> Welcome to Pakistan</h3>
+                    <h1> Do Come and visit Pakistan's most famous cities <span class="text_changer"></span></h1>
+                    <p> Pakistan Is one of the biggest country in the world.</p>
+                    <button class="btn"> Sign Up </button>
+                    <button class="btn"> Learn More. </button>
+
+                </section>
+            </main>
+
+    
+    </header>
+
+
+</body>
+
+</html>
